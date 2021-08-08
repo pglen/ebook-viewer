@@ -80,16 +80,41 @@ class Viewer(WebKit.WebView):
         """
         Sets style to day CSS
         """
-        settings = self.get_settings()
+        #settings = self.get_settings()
         #settings.props.user_stylesheet_uri = "file:///usr/share/easy-ebook-viewer/css/day.css"
         # TODO: Prefix location of day.css so it can be set during install
+
+        print("Setting day")
+
+        css_name = "/usr/share/easy-ebook-viewer/css/day.css"
+        with open(css_name) as file_open2:
+             css = file_open2.read()
+
+        #print("css", css)
+        mana = self.get_user_content_manager()
+        ssheet = WebKit.UserStyleSheet.new(css, WebKit.UserContentInjectedFrames.ALL_FRAMES,
+                                   WebKit.UserScriptInjectionTime.START, None, None)
+        mana.add_style_sheet(ssheet)
 
     def set_style_night(self):
         """
         Sets style to night CSS
         """
-        settings = self.get_settings()
-        settings.props.user_stylesheet_uri = "file:///usr/share/easy-ebook-viewer/css/night.css"
+        print("Setting night")
+
+        #settings = self.get_settings()
+        #settings.props.user_stylesheet_uri = "file:///usr/share/easy-ebook-viewer/css/night.css"
+
+        css_name = "/usr/share/easy-ebook-viewer/css/night.css"
+        with open(css_name) as file_open2:
+             css = file_open2.read()
+
+        #print("css", css)
+        mana = self.get_user_content_manager()
+        ssheet = WebKit.UserStyleSheet.new(css, WebKit.UserContentInjectedFrames.ALL_FRAMES,
+                                   WebKit.UserScriptInjectionTime.START, None, None)
+        mana.add_style_sheet(ssheet)
+
         # TODO: Prefix location of night.css so it can be set during install
 
     def callback(self, webview, context_menu, hit_result_event, event):
