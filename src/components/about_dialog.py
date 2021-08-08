@@ -48,8 +48,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
         authors = [_("Michał Daniel (developer, maintainer)"),
                    _("Nguyễn Ngọc Thanh Hà (contributor)"),
-                   _("Jens Persson (contributor)")]
-
+                   _("Jens Persson (contributor)"),
+                   _("Peter Glen (contributor)")
+                   ]
         # Thank you for the beautiful icon.
         artists = [_("Christian da Silva (www.christianda.com)")]
 
@@ -57,12 +58,17 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
             '/usr/share/easy-ebook-viewer/misc/easy-ebook-viewer-scalable.svg', 128, 128)
 
         about_dialog.set_logo(logo_pixbuf)
-        about_dialog.set_program_name(_("Easy eBook Viewer"))
+        about_dialog.set_program_name(_("Easy E-Book Viewer"))
         about_dialog.set_version("1.0")
         about_dialog.set_authors(authors)
-        about_dialog.set_website("https://github.com/michaldaniel/Ebook-Viewer")
-        about_dialog.set_website_label(_("Browse code at Github"))
+
+        #about_dialog.set_website("https://github.com/michaldaniel/Ebook-Viewer")
+        #about_dialog.set_website_label(_("Browse code at Github"))
+
+        about_dialog.set_website("https://github.com/pglen/ebook-viewer")
+        about_dialog.set_website_label(_("Browse code at Github (also ref to old project)"))
         about_dialog.set_artists(artists)
+
         _("[DON'T TRANSLATE] Replace name in \"Anonymous Translator ([replace] translation)\" with YOUR name and translation language!\n\nPS. python gettext makes it impossible to leave comments, I hope this works.")
         translator = _("Anonymous Translator ([replace] translation)")
         if translator != "Anonymous Translator ([replace] translation)":
@@ -70,9 +76,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
         about_dialog.set_license(software_license)
         about_dialog.set_comments(
-            _("Easy eBook Viewer is a simple and moder ePub files reader written in Python using GTK3 and WebKit."))
+            _("Easy E-Book Viewer is a simple ePub files reader written in Python using GTK3 and WebKit2."))
 
-        about_dialog.set_title(_("About Easy eBook Viewer"))
+        about_dialog.set_title(_("About Easy E-Book Viewer"))
 
         about_dialog.show_all()
         about_dialog.run()

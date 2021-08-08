@@ -1,17 +1,21 @@
 # README
 
-## Ebook viewer imported from (see below)
+## Ebook viewer imported from ... (see details below)
 
 ### Changed
 
  I converted this project from WebKit to Webkit2; It displayed EBOOKs pretty well,
-and I thought modern linux (es) could benefit from this simple E-Reader. Did not change anything else;
+and I thought modern linux (Ubu 20.x) could benefit from this simple E-Reader. Did not change anything else;
 
 PLS lemm'e know if it needs more attention;
 
 History:
 
-Sat 07.Aug.2021  Initial import / conversion
+    Sat 07.Aug.2021  Initial import / conversion
+    Mon 09.Aug.2021  Attempted to fix CSS dark theme
+
+ The themes do not work as expected; the dark theme only changes decorations, but not the main text ...
+any ideas?
 
 
 ## ORIGINAL README

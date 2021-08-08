@@ -9,6 +9,11 @@ body{
     */
 }
 
+:root {
+    color-scheme: light dark;
+}
+
+
 html * /* Sets those rules for every single html child element */
 {
 /*
