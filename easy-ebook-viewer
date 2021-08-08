@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/python3 /usr/share/easy-ebook-viewer/main.py "$@"

@@ -1,0 +1,24 @@
+body{
+    background-color: rgba(0,0,0,0) !important; /* transparent, GTK backgroun theme of wiget will show */
+    margin-right: 50px !important;
+    margin-left: 50px !important;
+    margin-top: 25px !important;
+    margin-bottom: 100px !important;
+}
+
+html * /* Sets those rules for every single html child element */
+{
+    color: #f5f5f5 !important;
+    font-family: 'Open Sans Regular', sans-serif !important;
+    background-color: rgba(0,0,0,0) !important;
+}
+
+::-moz-selection {
+    background-color: #ba9eb0;
+    color: #ffffff;
+}
+
+::selection {
+    background-color: #ba9eb0 ;
+    color: #ffffff;
+}
